@@ -1,10 +1,9 @@
 import React from 'react'
 import { Header, Image } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const navStyle = {
-    paddingTop: "25px",
-    paddingLeft: "100px",
-    marginBottom: "65px"
+    padding: "25px 0 25px 100px"
   };
 
   const condStyle = {
@@ -15,17 +14,22 @@ const navStyle = {
   }
 
   const imgStyle = {
-    display: "inline-block",
-    margin: "0 auto"
-  }
-  
+    left: "50%",
+    right: "50%",
+    top: "25px",
+    position: "absolute",
+  } 
 
 const NavBar = () => (
     <div>
-        <Header as='h2' style={navStyle}>
-            <Image circular src='../components/images/wave.png' style={imgStyle} /> Surf Spot
-            <Header as="h2" style={condStyle}>Check Surf Conditions</Header>
-        </Header>
+        <Router>
+            <Header as='h2' style={navStyle}>
+                <Route path="/">
+                <Image circular src='../../components/images/wave.png' style={imgStyle}/>
+                <Link to="/"></Link></Route> Surf Spot
+                <Header as="h2" style={condStyle}>Check Surf Conditions</Header>
+            </Header>
+        </Router>
     </div>
 )
 
