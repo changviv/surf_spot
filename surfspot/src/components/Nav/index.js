@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { Header, Image } from 'semantic-ui-react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+// css styling ------------------------------------------------
 const navStyle = {
     padding: "25px 0 25px 100px"
   };
@@ -20,17 +20,30 @@ const navStyle = {
     position: "absolute",
   } 
 
-const NavBar = () => (
-    <div>
-        <Router>
-            <Header as='h2' style={navStyle}>
-                <Route path="/">
-                <Image circular src='../../components/images/wave.png' style={imgStyle}/>
-                <Link to="/"></Link></Route> Surf Spot
-                <Header as="h2" style={condStyle}>Check Surf Conditions</Header>
+// React code ------------------------------------------------
+
+class NavBar extends Component {
+
+  render() {
+    return (
+      <div>
+            <Header as="h2" style={navStyle}>
+            {/* {this.renderRedirect()} */}
+              <Image
+                href="/"
+                circular
+                src="..Nav/..components/images/wave.png"
+                // onClick={this.imgRedirect}
+                style={imgStyle}s
+              />{" "}
+              Surf Spot
+              <Header as="h2" style={condStyle}>
+                Check Surf Conditions
+              </Header>
             </Header>
-        </Router>
-    </div>
-)
+      </div>
+    );
+  }
+}
 
 export default NavBar;
