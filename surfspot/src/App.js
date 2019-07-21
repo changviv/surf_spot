@@ -13,8 +13,9 @@ class App extends Component {
       return ( 
         <div>
           <Nav />
-          <SearchBar />
-          <Jumbotron />
+          <Jumbotron>
+            <SearchBar />
+          </Jumbotron>
         </div>
 
       )
