@@ -8,7 +8,6 @@ const jumboStyle = {
   padding: "5px"
 }
 
-
 const ContainerExampleAlignment = (props) => (
   <div>
     <Container style={jumboStyle} textAlign='justified'>
