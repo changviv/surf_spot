@@ -4,8 +4,8 @@ import { Container, Divider } from 'semantic-ui-react'
 const jumboStyle = {
   boxSizing: "border-box",
   width: "100%",
-  border: "solid #5B6DCD 10px",
-  padding: "5px"
+  border: "solid #808080 2px",
+  padding: "2px"
 }
 
 const ContainerExampleAlignment = (props) => (
