@@ -31,11 +31,10 @@ class NavBar extends Component {
             {/* {this.renderRedirect()} */}
               <Image
                 href="/"
-                circular
-                src="..Nav/..components/images/wave.png"
+                src="./wave.png"
                 // onClick={this.imgRedirect}
-                style={imgStyle}s
-              />{" "}
+                style={imgStyle}
+              />
               Surf Spot
               <Header as="h2" style={condStyle}>
                 Check Surf Conditions
